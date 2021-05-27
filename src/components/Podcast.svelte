@@ -12,7 +12,7 @@
     const { open } = getContext('simple-modal');
   
     const showModal = () => {
-      open(ModalContent, {texte: title, clip: clip});
+      open(ModalContent, {title: title, clip: clip, typo: typo, typoColor: typoColor});
     };
 </script>
 

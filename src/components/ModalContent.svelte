@@ -1,8 +1,10 @@
 <script>
-    export let texte;
+    export let title;
     export let clip;
+    export let typo;
+    export let typoColor;
 
-    let audio = document.getElementById("audio");
+    // let audio = document.getElementById("audio");
 
     // audio.volume = 0.5;
 </script>
@@ -19,13 +21,18 @@
     {
         text-align: center;
     }
+    .clip .title
+    {
+        padding-bottom: 1em;
+        font-size: 2em;
+    }
 </style>
 <body>
     <div class="clip">
+        <div class="title" style="font-family: {typo}; color: {typoColor}">
+                {title}
+        </div>
         <!-- svelte-ignore a11y-media-has-caption -->
         <audio id="audio" src={clip} controls autoplay></audio>
-        <div>
-            {texte}
-        </div>
     </div>
 </body>
