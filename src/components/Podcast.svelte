@@ -7,11 +7,12 @@
     export let typo;
     export let typoColor;
     export let typoSize;
+    export let clip;
     
     const { open } = getContext('simple-modal');
   
     const showModal = () => {
-      open(ModalContent, {texte: title});
+      open(ModalContent, {texte: title, clip: clip});
     };
 </script>
 
