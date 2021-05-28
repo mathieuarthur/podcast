@@ -1,5 +1,6 @@
 <script>
     export let title;
+    export let texte;
     export let clip;
     export let typo;
     export let typoColor;
@@ -26,13 +27,20 @@
         padding-bottom: 1em;
         font-size: 2em;
     }
+    .clip .texte
+    {
+        padding-top: 1em;
+    }
 </style>
 <body>
     <div class="clip">
         <div class="title" style="font-family: {typo}; color: {typoColor}">
-                {title}
+            {title}
         </div>
         <!-- svelte-ignore a11y-media-has-caption -->
         <audio id="audio" src={clip} controls autoplay></audio>
+        <div class="texte">
+            {texte}
+        </div>
     </div>
 </body>
