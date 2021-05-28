@@ -1,13 +1,17 @@
 <script>
+import { onMount } from "svelte";
+
+
     export let title;
     export let texte;
     export let clip;
     export let typo;
     export let typoColor;
 
-    // let audio = document.getElementById("audio");
-
-    // audio.volume = 0.5;
+    let audio;
+    onMount(() => {
+        audio.volume=0.5;
+    })
 </script>
 
 <style>
@@ -38,7 +42,7 @@
             {title}
         </div>
         <!-- svelte-ignore a11y-media-has-caption -->
-        <audio id="audio" src={clip} controls autoplay></audio>
+        <audio bind:this={audio} src={clip} controls autoplay></audio>
         <div class="texte">
             {texte}
         </div>
